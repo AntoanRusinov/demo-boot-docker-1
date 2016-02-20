@@ -3,5 +3,4 @@ VOLUME /tmp
 COPY demo-boot-docker-1-0-SNAPSHOT.jar app1.jar
 WORKDIR /apps/spring_app
 RUN bash -c 'touch /app1.jar'
-RUN apt-get install postgres-9.4
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app1.jar"]
